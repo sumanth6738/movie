@@ -1,0 +1,92 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+nav {
+  position: fixed;
+  z-index: 99;
+  background: #fff;
+  z-index: 99;
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto; 
+  padding: 12px 0;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  -webkit-box-shadow: 0px 10px 54px -11px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 10px 54px -11px rgba(0,0,0,0.75);
+  box-shadow: 0px 10px 54px -11px rgba(0,0,0,0.75);
+}
+
+
+nav ul {
+  width: 100%;
+  display: grid;
+  list-style: none;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+} 
+
+nav ul:first-of-type{
+  grid-template-columns: 1fr;
+}
+nav ul:first-of-type li{
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-indent: 30px;
+}
+nav ul:first-of-type li span {
+  font-weight: 500;
+  color: #444;
+}
+
+nav ul:last-of-type{
+  grid-template-columns: repeat(5, 1fr);
+
+}
+
+
+nav ul li a{
+  color:#111;
+  text-decoration: none; 
+  font-weight: bold;
+  display: block;
+
+}
+
+.MuiAppBar-colorPrimary {
+  color: #fff;
+  background-color: #b34b72;
+}
+
+.slider-container {
+  width: 100%;
+  height: 100%;
+}
+
+.carousel .slide {
+  min-width: 100%;
+  height: 500px;
+  margin: 0;
+  position: relative;
+  text-align: center;
+  background: #000;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  background-color: white;
+  padding: 10px;
+  position : relative;
+}
