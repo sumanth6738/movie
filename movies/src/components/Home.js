@@ -10,7 +10,7 @@ import Movielist from './Movies/Movielist'
 class Home extends React.Component {
     render() {
     return (
-        <div >
+        <div style={{paddingTop:'50px'}}>
             {/* <Header /> */}
       <Img_slide /> <br></br>
       <Movielist />

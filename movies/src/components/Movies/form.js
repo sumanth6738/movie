@@ -1,7 +1,5 @@
 import React from 'react' 
 import {Row, Form, Col, Button, Card, Popover, OverlayTrigger} from 'react-bootstrap'
-// import axios from '../../config/axios'
-//  import CreatableSelect from 'react-select/lib/Creatable';
 import Help from '@material-ui/icons/Help';
 // import Help from '@material-ui/icons/Help';
 
@@ -16,11 +14,11 @@ class MovieForm extends React.Component {
     constructor() {
         super() 
         this.state = {
-          title:'',
+          title: "",
           year: '',       
           director:'',
           notes:'',
-         cast:'',
+          cast:'',
           genre:'',
           files: [{
             source: 'index.html',
@@ -56,9 +54,7 @@ class MovieForm extends React.Component {
 
         this.setState(()=>({cast}))
       }
-    // handleChange = (e)=> {
-    //     [e.target.name]= e.target.value
-    // }
+  
       handleGenreChange = (e) => {
         const genre = e.target.value
 
@@ -81,31 +77,31 @@ class MovieForm extends React.Component {
       handleSubmit = (e) => {
        
         e.preventDefault() 
-        console.log('clicked')
-        // const formData = {
-        //    title: this.state.title,
-        //    notes: this.state.notes,
-        //    year: this.state.year,
-        //    director: this.state.director,
-        //    cast: this.state.cast,
-        //    genre: this.state.genre
+        // console.log('clicked')
+        const formData = {
+           title: this.state.title,
+           notes: this.state.notes,
+           year: this.state.year,
+           director: this.state.director,
+           cast: this.state.cast,
+           genre: this.state.genre
           
-        // }
-        // console.log(formData)
-        // this.props.handleSubmit(formData)
-        // // console.log(this.props)
+        }
+        console.log(formData)
+        this.props.handleSubmit(formData)
+        // console.log(this.props)
 
-        // // clear form 
+        // clear form 
 
-        // this.setState(() => ({ 
-        //    title:'',
-        //    notes:'',
-        //    year:'',
-        //    director:"",
-        //    cast:'',
-        //    genre:''
+        this.setState(() => ({ 
+           title:'',
+           notes:'',
+           year:'',
+           director:"",
+           cast:'',
+           genre:''
 
-        // }))
+        }))
       
     }
     
@@ -153,86 +149,51 @@ class MovieForm extends React.Component {
                
                <Card>
                     <Card.Header><b>Add a Movie</b></Card.Header>
-                    {/* <Card.Body>
-                        <Card.name>Special name treatment</Card.name>
-                        <Card.Text>
-                        With supporting text below as a natural lead-in to additional content.
-                        </Card.Text>
-                        <Button variant="primary">Go somewhere</Button>
-                    </Card.Body> */}
+                    
                   <br></br>
-               <Form as={Col} md="12"  >
+                  <Form as={Col} md="8" >
                
-                    <Form.Group as={Col} md="6" controlId="formBasicTitle">
-                        <Form.Label> <b>Movie Name</b> </Form.Label>
-                        <Form.Control type="text" value={this.state.title} onChange={this.handleTitleChange}  name="title"   placeholder="unnamed story" required />
-                        
-                    </Form.Group>
-                    <hr></hr>
+               <Form.Group as={Col} md="8" controlId="formBasicName">
+                   <Form.Label> Movie Name <Example/> </Form.Label>
+                   <Form.Control type="text" value={this.state.title} onChange={this.handleTitleChange}  placeholder="title" required />
+               </Form.Group><hr></hr>
+               <Form.Group as={Col} md="8" controlId="formBasicDescription">
+                   <Form.Label> Notes <Example/> </Form.Label>
+                   <Form.Control as="textarea" rows='3' value={this.state.notes} onChange={this.handleNotesChange}  placeholder="description" required />
+               </Form.Group><hr></hr>
+               <Form.Group as={Col} md="8" controlId="formBasicYear">
+                   <Form.Label>Year</Form.Label>
+                   <Form.Control type="text" value={this.state.year} onChange={this.handleYearChange}  placeholder="year" required />
+               </Form.Group><hr></hr>
+               <Form.Group as={Col} md="8" controlId="formBasicDirector">
+                   <Form.Label>Director</Form.Label>
+                   <Form.Control type="text" value={this.state.director} onChange={this.handleDirectorChange}  placeholder="director" required />
+               </Form.Group><hr></hr>
+               <Form.Group as={Col} md="8" controlId="formBasicCast">
+                   <Form.Label>Cast</Form.Label>
+                   <Form.Control type="text" value={this.state.cast} onChange={this.handleCastChange}  placeholder="cast" required />
+               </Form.Group><hr></hr>
+               <Form.Group as={Col} md="8" controlId="formBasicGenre">
+                   <Form.Label>Genre</Form.Label>
+                   <Form.Control as="select" value={this.state.genre} onChange={this.handleGenreChange}   required >
+                    <option>select</option>
+                    <option value="Action">Action</option>
+                    <option value="Horror">Horror</option>
+                    <option value="Romance">Romance</option>
+                    <option value="Comedy-drama">Comedy-drama</option>
                     
-                    <Form.Group as={Col} sm="12" controlId="formBasicDescription">
-                    
-                         <Form.Label><b> Description </b> 
-                        <Example />
-                    
-                        </Form.Label>
-                        <Form.Control as="textarea" rows='10'  value={this.state.notes} onChange={this.handleNotesChange} name="notes" placeholder="description" required />
-                        
-                    </Form.Group>   <br></br><hr></hr>
-                    <Form.Group as={Col} sm="12" controlId="formBasicYear">
-                <Form.Label><b> year </b> 
-                    <Example />
-                
-                    </Form.Label>
-                    <Form.Control type="text"   value={this.state.year} onChange={this.handleYearChange} name='year'  placeholder="year" required />
-                    
-                </Form.Group>   <br></br><hr></hr> 
-                    <Form.Group as={Col} sm="12" controlId="formBasicDirector">
-                    
-                    <Form.Label><b> Director </b> 
-                    <Example />
-                
-                    </Form.Label>
-                    <Form.Control type="text" rows='10'  value={this.state.director} onChange={this.handleDirectorChange}  name ="director" placeholder="director" required />
-                    
-                </Form.Group>   <br></br><hr></hr>
-                <Form.Group as={Col} sm="12" controlId="formBasicCast">
-                <Form.Label><b> Cast </b> 
-                    <Example />
-                
-                    </Form.Label>
-                    <Form.Control type="text" rows='10'  value={this.state.cast} onChange={this.handleCastChange} name="cast" placeholder="music" required />
-                    
-                </Form.Group>   <br></br><hr></hr>
-                   
-                    <Form.Group as={Col} md="6" controlId="exampleForm.ControlSelect1" > 
-                        <Form.Label> <b>Genre</b> <Example /></Form.Label>
-                       
-                        <Form.Control as="select" value={this.state.genre} onChange={this.handleGenreChange}>
-                    {/* <select value={this.state.genreId} onChange={this.handlegenreChange}> */}
-                        <option> Select a genre</option>
-                        <option value='action'> Action</option>
-                        <option value='horror'> horror</option>
-                        <option value="romance"> romance</option>
-                    {/* </select> */}
-                        </Form.Control>
-                    </Form.Group>    <hr></hr>
-                  
-                    {/* <Form.Group as={Col} md="6" controlId="exampleForm.ControlSelect2" >
-                        <Form.Label> <b>Tags</b> <Example /></Form.Label>
-                    <CreatableSelect
-                        isClearable
-                        onChange={this.handleTagChange}
-                        isMulti
-                        // options={options}
-                    />
-                     </Form.Group> */}
-                    <br/>
-                    <Button variant="primary" type="submit" onSubmit={this.handleSubmit}>
-                        Submit
-                    </Button>
-                  
-                </Form>
+                    </Form.Control>
+               </Form.Group>
+               
+               <br></br>
+              
+               
+              
+               <br/>
+               <Button variant="primary" type="submit" onClick={this.handleSubmit}>
+                   Submit
+               </Button>
+           </Form>
                 <br></br>
                 </Card>
             

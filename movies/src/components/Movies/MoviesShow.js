@@ -1,7 +1,7 @@
 import React from 'react'
 import axios from 'axios'
 import { Link} from 'react-router-dom'
- import {  Row, Col, Card, Form,} from 'react-bootstrap';
+ import {  Row} from 'react-bootstrap';
 
 
 
@@ -12,16 +12,28 @@ class MovieShow extends React.Component {
         this.state = {
            movie:{}
         }
+        this.handleDelete = this.handleDelete.bind(this)
     }
+    
     componentDidMount(){
         const id = this.props.match.params.id
         console.log(id)
         axios.get(`http://training.mobignosis.net/movies/${id}`)
         .then(response => this.setState(()=> ({movie:response.data.values})))
     }
+    handleDelete (){
+        const confirmDelete = window.confirm("Are you sure?")
+        if(confirmDelete){
+            //api call to delete
+            axios.delete(`http://training.mobignosis.net/movies/${this.state.movie.id}`)
+            .then(()=> this.props.history.push('/movies'))
+            .catch(err => window.alert(err))
+        }
+    }
    
       render(){
-        console.log(this.state.movie)
+ 
+        // console.log(this.state.movie)
         return(
             <div className="container-fluid" >
             <div className="row">
@@ -40,7 +52,13 @@ class MovieShow extends React.Component {
                                     <b> Cast </b> : {this.state.movie.cast}<br></br>
                                     <b> notes </b> : {this.state.movie.notes}<br></br>
                                     
-                                    
+                                    <center>
+                     <Link to ={`/movies/edit/${this.state.movie.id}`}> edit </Link>
+
+                     <button onClick= {this.handleDelete}>
+                        delete 
+                     </button>
+                     <Link to ="/movies"> back </Link></center>
                                 <br></br>
                             
                         <br></br>

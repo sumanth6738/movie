@@ -8,6 +8,8 @@ import Movielist from './components/Movies/Movielist'
 import UserLogin from './authentication/login'
 import Drama from './components/genres/Drama'
 import MovieShow from './components/Movies/MoviesShow'
+import MovieNew from './components/Movies/New'
+import EditMovie from './components/Movies/EditMovie';
 
 
 
@@ -40,7 +42,8 @@ function App() {
       <Route path="/login" component = {UserLogin} exact={true} />
         <Route path="/movies" component = {Movielist} exact={true} />
         <Route path="/movie/:id" component = {MovieShow} exact={true} />
-        <Route path="/newmovie" component = {MovieForm} exact={true} />
+        <Route path="/newmovie" component = {MovieNew} exact={true} />
+        <Route path='/movies/edit/:id'component = {EditMovie} exact={true} />
         <Route path="/genre/Drama" component = {Drama} exact={true} />
         {/* <Route path="/suggestion" component = {Suggestions} exact={true} /> */}
            
