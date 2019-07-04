@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/static/css/main.2cb6f22c.chunk.css",
+    "main.js": "/static/js/main.6167a245.chunk.js",
+    "main.js.map": "/static/js/main.6167a245.chunk.js.map",
+    "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
+    "runtime~main.js.map": "/static/js/runtime~main.a8a9905a.js.map",
+    "static/css/2.2eb7f7ff.chunk.css": "/static/css/2.2eb7f7ff.chunk.css",
+    "static/js/2.8cecb0fb.chunk.js": "/static/js/2.8cecb0fb.chunk.js",
+    "static/js/2.8cecb0fb.chunk.js.map": "/static/js/2.8cecb0fb.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.4c9ea33371ec713f494a2d446535beff.js": "/precache-manifest.4c9ea33371ec713f494a2d446535beff.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/2.2eb7f7ff.chunk.css.map": "/static/css/2.2eb7f7ff.chunk.css.map",
+    "static/css/main.2cb6f22c.chunk.css.map": "/static/css/main.2cb6f22c.chunk.css.map",
+    "static/media/Kabir.jpg": "/static/media/Kabir.8b671677.jpg",
+    "static/media/dangal.jpg": "/static/media/dangal.64ce2376.jpg",
+    "static/media/rajni.jpg": "/static/media/rajni.49489e27.jpg",
+    "static/media/sanju.jpg": "/static/media/sanju.7607f478.jpg",
+    "static/media/uri.jpg": "/static/media/uri.cd2f2b3c.jpg"
+  }
+}
