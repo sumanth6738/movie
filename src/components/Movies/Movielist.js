@@ -39,7 +39,7 @@ function Movie(props){
                         
             <h3 style={{border:'1px', color:'#ad0954'}}><Link to='/movies' style={{color:'#ad0954'}}>Movies </Link>
             <span style={{float: 'right', fontSize:'15px'}}>
-            <Fab style={{backgroundColor:"#ad0954", marginTop:'-10px'}} aria-label="Add" className={classes.fab}>
+            <Fab size='small' style={{backgroundColor:"#ad0954", marginTop:'0px' }} aria-label="Add" className={classes.fab}>
             <Link to='/newmovie'style={{color:'white'}}><AddIcon /></Link>  
             </Fab>
             </span></h3>

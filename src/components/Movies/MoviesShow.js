@@ -73,10 +73,10 @@ class MovieShow extends React.Component {
                     <div className="col xs={12} sm={12} md={6} lg={6}" style={{paddingTop:"0px"}}>
                         <h1 style={{color:'#ad0954'}}> <b>{this.state.movie.title}</b>
                         <span style={{float:'right'}}>
-                            <Fab style={{backgroundColor:"#ad0954",marginRight:'10px'}} aria-label="Edit" className={classes.fab}>
+                            <Fab size='small' style={{backgroundColor:"#ad0954",marginRight:'10px'}} aria-label="Edit" className={classes.fab}>
                             <Link to={`/movies/edit/${this.state.movie.id}`} style={{color:'white'}}>   <Edit /></Link>
                             </Fab>
-                            <Fab style={{backgroundColor:"#ad0954",color:'white'}} aria-label="Delete" className={classes.fab} onClick={this.handleShow}>
+                            <Fab size='small' style={{backgroundColor:"#ad0954",color:'white'}} aria-label="Delete" className={classes.fab} onClick={this.handleShow}>
                             <Delete /> 
                             </Fab>
                             <Modal show={this.state.show} onHide={this.handleClose} style={{marginTop:"200px"}}>

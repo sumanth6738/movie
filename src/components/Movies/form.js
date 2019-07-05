@@ -156,7 +156,7 @@ class MovieForm extends React.Component {
                
                         <Form.Group as={Col} md="8" lg="8" controlId="formBasicName">
                             <Form.Label> Movie Name <Example/> </Form.Label>
-                            <Form.Control type="text" value={this.state.title ||''} onChange={this.handleTitleChange}  placeholder="title" required />
+                            <Form.Control type="text" value={this.state.title ||''} onChange={this.handleTitleChange} name="email"  placeholder="title" required />
                         </Form.Group><hr></hr>
 
                         <Form.Group as={Col} md="8" controlId="formBasicDescription">
@@ -182,6 +182,7 @@ class MovieForm extends React.Component {
                         <Form.Group as={Col} md="8" controlId="formBasicGenre">
                             <Form.Label>Genre</Form.Label>
                             <Form.Control as="select" value={this.state.genre || ''} onChange={this.handleGenreChange}  required >
+                                
                                 <option>select</option>
                                 <option value="Action">Action</option>
                                 <option value="Horror">Horror</option>

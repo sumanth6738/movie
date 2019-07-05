@@ -14,26 +14,26 @@ function Img_slide() {
             <Carousel className="carousel-style" 
                 showThumbs={false} showStatus={false} 
                 interval={1000} useKeyboardArrows={true}
-                dynamicHeight={false}
+                dynamicHeight
                 autoPlay={true} >
                 <div>
-                    <img src={img1} alt='img1' height='600px'/>
+                    <img src={img1} alt='img1' height="400px" width="810px"/>
                     {/* <p className="legend">Legend 1</p> */}
                 </div>
                 <div>
-                <img src={img2} alt='img2' height='auto' />
+                <img src={img2} alt='img2' height="400px" width="810px" />
                     {/* <p className="legend">Legend 2</p> */}
                 </div>
                 <div>
-                <img src={img3} alt='img3' height='600px' />
+                <img src={img3} alt='img3' height="400px" width="810px" />
                     {/* <p className="legend">Legend 3</p> */}
                 </div>
                 <div>
-                <img src={img4} alt='img4' height='600px'/>
+                <img src={img4} alt='img4' height="400px" width="810px"/>
                     {/* <p className="legend">Legend 2</p> */}
                 </div>
                 <div>
-                <img src={img5} alt='img5' height='600px'/>
+                <img src={img5} alt='img5' height="400px" width="810px"/>
                     {/* <p className="legend">Legend 3</p> */}
                 </div>
 

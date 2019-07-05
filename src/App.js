@@ -19,7 +19,7 @@ function App() {
       <ul>
           <li className="logo" style={{color:'white'}}>Book My Movie
           <span style={{float: 'right'}} >
-          <Link to='./'><Homeicon  style={{ fill: 'white', marginRight:'10px' }} /></Link> 
+          <Link to='/'><Homeicon  style={{ fill: 'white', marginRight:'10px' }} /></Link> 
             <Link to='/movies'><Search  style={{ fill: 'white', marginRight:'10px' }} /></Link> 
            <PermIdentity  style={{ fill: 'white' , marginRight:'30px'}}/></span></li>
           {/* <li>  <input type="text" placeholder="Search.." /></li> */}
@@ -32,7 +32,7 @@ function App() {
           
     </nav>
       <Switch>
-      <Route path="/" component = {Home} exact={true} />
+        <Route path="/" component = {Home} exact={true} />
      
         <Route path="/movies" component = {List} exact={true} />
         {/* <Route path="/search" component = {Search} exact={true} /> */}
