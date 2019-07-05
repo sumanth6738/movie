@@ -128,7 +128,7 @@ class Modallist extends React.Component{
                     show = {this.state.show}
                     handleClose= {this.handleClose}
                     movies = {this.state.moviez}
-                    />
+                />
 
               
             </div>
