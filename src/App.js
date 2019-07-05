@@ -9,6 +9,7 @@ import PermIdentity from '@material-ui/icons/PermIdentity';
 import Search from '@material-ui/icons/Search';
 import Homeicon from '@material-ui/icons/Home';
 // import Search from './components/layouts/Search'
+import Modallist from './components/Modal/Mlist'
 
 function App() {
  
@@ -39,7 +40,7 @@ function App() {
         <Route path="/movie/:id" component = {MovieShow} exact={true} />
         <Route path="/newmovie" component = {MovieNew} exact={true} />
         <Route path='/movies/edit/:id'component = {EditMovie} exact={true} />
-      
+        <Route path="/modallist" component = {Modallist} exact={true} />
         
            
       </Switch>

@@ -1,5 +1,5 @@
 import React from 'react'
-import axios from 'axios'
+import axios from './../../config/axios'
 import { makeStyles } from '@material-ui/core/styles';
 import { Link} from 'react-router-dom'
 import {Row, Modal,Button} from 'react-bootstrap';
@@ -42,14 +42,14 @@ class MovieShow extends React.Component {
     componentDidMount(){
         const id = this.props.match.params.id
         //console.log(id)
-        axios.get(`http://training.mobignosis.net/movies/${id}`)
+        axios.get(`/movies/${id}`)
         .then(response => this.setState(()=> ({movie:response.data.values})))
     }
     handleDelete (){
         // const confirmDelete = window.confirm("Are you sure?")
         // if(clicked){
         //api call to delete
-        axios.delete(`http://training.mobignosis.net/movies/${this.state.movie.id}`)
+        axios.delete(`/movies/${this.state.movie.id}`)
         .then(()=> this.props.history.push('/movies'))
         .catch(err => (err))
         // }
